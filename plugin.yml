@@ -1,0 +1,5 @@
+name: HubMC
+version: 1.0.0
+main: com.github.mourthag.MainHubPlugin.Main
+author: Mourthag
+commands:
