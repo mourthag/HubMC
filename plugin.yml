@@ -1,5 +1,12 @@
 name: HubMC
-version: 1.0.0
+version: 1.0.1
 main: com.github.mourthag.MainHubPlugin.Main
 author: Mourthag
 commands:
+  lobby:
+    aliases: [hub, l, h, leave]
+    usage: /lobby
+    description: Teleports you back to the Lobby
+  TKR:
+    usage: /TKR
+    description: Teleports you to the TKR Server
