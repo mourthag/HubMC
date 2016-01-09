@@ -1,10 +1,10 @@
 package com.github.mourthag.ListenerHubPlugin;
 
-import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 
 import com.github.mourthag.MainHubPlugin.*;
 
@@ -23,8 +23,14 @@ public class PlayerListener implements Listener
 	{
 		Player p = e.getPlayer();				
 		
-		p.getInventory().addItem(mainPlugin.HubItems.getTeleporter());
-		p.sendMessage(ChatColor.GREEN + "Willkommen");
+		p.getInventory().setItem(0, mainPlugin.HubItems.getTeleporter());
+	}
+	
+	@EventHandler
+	public void onRespawn(PlayerRespawnEvent e)
+	{
+		Player p = e.getPlayer();
+		p.getInventory().setItem(0, mainPlugin.HubItems.getTeleporter());
 	}
 }
 		
